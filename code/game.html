@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>走格子游戏</title>
+    <style>
+        canvas {
+            background-color: black;
+            display: block;
+            margin: 0 auto;
+        }
+        #eventPopup {
+            display: none;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -30%);
+            background-color: white;
+            border: 2px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+        #eventPopup button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="gameCanvas" width="800" height="800"></canvas>
+
+<div id="eventPopup">
+    <h2>事件：高等数学</h2>
+    <p>恭喜，你被高等数学砸中了！</p>
+    <p>活力值-10，智慧值+5，心情-3，san值暴跌</p>
+    <button onclick="retryGame()">重来</button>
+    <button onclick="continueGame()">继续</button>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
